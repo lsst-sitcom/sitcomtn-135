@@ -1,11 +1,11 @@
 [![Website](https://img.shields.io/badge/sitcomtn--135-lsst.io-brightgreen.svg)](https://sitcomtn-135.lsst.io)
 [![CI](https://github.com/lsst-sitcom/sitcomtn-135/actions/workflows/ci.yaml/badge.svg)](https://github.com/lsst-sitcom/sitcomtn-135/actions/workflows/ci.yaml)
 
-# Timing of the AOS Wavefront Estimation Pipeline
+# Tasks in the AOS Wavefront Estimation Pipeline
 
 ## SITCOMTN-135
 
-Here we evaluate the timing for the Active Optics System Wavefront Estimation Pipeline (WEP) and investigate where bottlenecks occur and how to resolve those bottlenecks.
+Here we explain the Rubin Science Pipeline tasks that make up the Active Optics System Wavefront Estimation Pipeline (WEP) and investigate timing and implementation of those tasks in a production environment.
 
 **Links:**
 
