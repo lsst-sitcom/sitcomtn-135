@@ -6,7 +6,7 @@ Here we explain the Rubin Science Pipeline Tasks that make up the Active Optics 
 
 ## WEP Pipeline Tasks
 
-The Wavefront Estimation Pipeline (WEP) is the code that will analyze defocal images and estimate the Rubin Observatory wavefront in terms of Zernike polynomials. The Rubin Active Optics System (AOS) will rely on these estimates to calculate the needed corrections to the optical system to maximize image quality. The pipeline runs as a set of Rubin Science Pipeline "Pipe Tasks". There are four sets of tasks that make up the pipeline of which the final three are developed by the Rubin AOS team and maintained on github at https://github.com/lsst-ts/ts_wep. The four jobs that the tasks perform are:
+The Wavefront Estimation Pipeline (WEP) is the code that will analyze defocal images and estimate the Rubin Observatory wavefront in terms of Zernike polynomials. The Rubin Active Optics System (AOS) will rely on these estimates to calculate the needed corrections to the optical system to maximize image quality. The pipeline runs as a set of Rubin Science Pipeline "Pipeline Tasks". There are four sets of tasks that make up the pipeline of which the final three are developed by the Rubin AOS team and maintained on github in the `ts_wep` repository found at https://github.com/lsst-ts/ts_wep. The four jobs that the tasks perform are:
 
 1. Instrument Signature Removal (ISR): This is performed on the raw images and the code for this task is developed by the Rubin DM team.
 2. Catalog Generation
@@ -37,17 +37,45 @@ There are two separate tasks that perform the cut out step and they are differen
 
 ### Zernike Estimation
 
-TIE Writeup: https://sitcomtn-111.lsst.io/
+Once the postage stamps are created and stored in the butler the final pipeline task that runs is the `CalcZernikesTask`. This task estimates the wavefront of the optical system using pairs of donuts. It does this for every pair of donuts on all sensors before averaging across each sensor. We currently have two methods implemented for Zernike estimation and two averaging methods. The two methods for calculating the Zernike estimates of the wavefront are:
+
+1. Transport of Intensity Equation (TIE): This method uses the pairs of defocal sources on either side of focus to estimate the wavefront. For more information on this algorithm and how it is implemented in the WEP code see https://sitcomtn-111.lsst.io/.
+2. Forward Modelling with Danish: This method uses the defocal image forward modelling code [`danish`](https://github.com/jmeyers314/danish) to estimate the wavefront that produced the image and then expresses that in terms of Zernike polynomial coefficients. This method does not actually require pairs of images and implementing single side-of-focus results is something we will discuss in future work.
+
+Once there are Zernike coefficients for each pair of sources we then must combine the results from all sources on each detector into a single value per detector to feed into the next step of the AOS code that actually uses the estimated wavefront to calculate the corrections to the optical system. To do this combination we have two methods:
+
+1. `combineZernikesMeanTask`: This subtask just takes the mean of each Zernike coefficients across all sources on a detector.
+2. `combineZernikesSigmaClipTask`: This subtask uses sigma clipping of Zernike coefficients to remove outliers from the final mean.
+
+At the end of this task each detector has a single array containing an averaged estimate of the wavefront in terms of Zernike polynomials that is stored in the butler.
+
+### Future Work
+
 
 ### Additional Resources
 
-ts_analysis_notebooks
+#### Jupyter Notebooks
+
+The AOS team has additional documentation on the tasks including additional information on the configuration parameters available in a set of documentation notebooks in the [ts_analysis_notebooks repository](https://github.com/lsst-ts/ts_analysis_notebooks).
+
+Here are some specific notebooks for each set of tasks:
+
+* Catalog Generation:
+    * [wepSourceSelectionWithWcs.ipynb](https://github.com/lsst-ts/ts_analysis_notebooks/blob/7749e78325d06be01db5c3683f4a6abde82c1e47/aos/closed_loop/wepSourceSelectionWithWcs.ipynb): Explains more about generating donut catalogs with WCS and the reference catalogs.
+* Postage Stamp Creation:
+    * [cutOutDonutsWithWEP.ipynb](https://github.com/lsst-ts/ts_analysis_notebooks/blob/develop/aos/closed_loop/cutOutDonutsWithWEP.ipynb): Shows how to run the donut cut out task interactively.
+* Zernike Estimation:
+    * [calcZernikesFromDonutStamps.ipynb](https://github.com/lsst-ts/ts_analysis_notebooks/blob/develop/aos/closed_loop/calcZernikesFromDonutStamps.ipynb): Demonstrates how to use the donut stamps stored in the butler to run the Zernike estimation pipeline task. Also includes additional details on the sigma clipping method to combine Zernike coefficients in the final output.
+
+#### Code Documentation
+
+The WEP APIs and code structure are also extensively documented in the offical `ts_wep` repository documentation found at https://ts-wep.lsst.io/.
 
 ## WEP Timing
 
 ### Running as a pipeline from command line
 
-The Active Optics System (AOS) will need to run completely between exposures during Rubin Observatory commissioning. With a little bit of time between exposures this gives us a time constraint of approximately 33 seconds to run the complete AOS including propogating corrections through to the optical system. Therefore, the WEP pipeline needs to run as quickly as possible preferably within about 25 seconds to leave time for the corrections to be made.
+The Active Optics System (AOS) will need to run completely between exposures during Rubin Observatory commissioning. With a realistic estimation of 3 seconds of overhead between exposures this gives us a time constraint of approximately 33 seconds to run the complete AOS including propogating corrections through to the optical system. Therefore, the WEP needs to run within about 25 seconds to leave time for the corrections to be made. We
 
 ### Running inside Rapid Analysis
 
