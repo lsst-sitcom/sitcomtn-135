@@ -1,0 +1,374 @@
+starting at Thu Jul 25 13:13:23 PDT 2024 on sdfmilan113
+/sdf/home/b/brycek/u/aos-repos/sitcomtn-135/notebooks/scripts
+Unable to find an acceptable version of ts_imsim
+lsst.pipe.base.quantum_graph_builder INFO: Processing pipeline subgraph 1 of 1 with 2 task(s).
+lsst.pipe.base.quantum_graph_builder INFO: Iterating over query results to associate quanta with datasets.
+lsst.pipe.base.quantum_graph_builder INFO: Initial bipartite graph has 36 quanta, 130 dataset nodes, and 144 edges from 18 query row(s).
+lsst.pipe.base.quantum_graph_builder INFO: Generated 18 quanta for task isr.
+lsst.pipe.base.quantum_graph_builder INFO: Generated 18 quanta for task generateDonutDirectDetectTask.
+lsst.ctrl.mpexec.cmdLineFwk INFO: QuantumGraph contains 36 quanta for 2 tasks, graph ID: '1721938452.759132-2085205'
+Quanta             Tasks            
+------ -----------------------------
+    18                           isr
+    18 generateDonutDirectDetectTask
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 2, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 2, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000012-0-r-R22_S02-det002.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S02 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 2, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'} took 3.661 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 1 quanta successfully, 0 failed and 35 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 1, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 1, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000010-0-r-R22_S01-det001.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S01 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 1, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'} took 3.054 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 2 quanta successfully, 0 failed and 34 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 8, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 8, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000012-0-r-R22_S22-det008.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S22 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 8, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'} took 2.973 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 3 quanta successfully, 0 failed and 33 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 5, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 5, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000010-0-r-R22_S12-det005.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S12 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 5, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'} took 2.981 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 4 quanta successfully, 0 failed and 32 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 4, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 4, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000012-0-r-R22_S11-det004.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S11 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 4, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'} took 2.931 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 5 quanta successfully, 0 failed and 31 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 0, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 0, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000010-0-r-R22_S00-det000.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S00 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 0, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'} took 3.041 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 6 quanta successfully, 0 failed and 30 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 3, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 3, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000010-0-r-R22_S10-det003.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S10 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 3, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'} took 2.971 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 7 quanta successfully, 0 failed and 29 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 4, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 4, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000010-0-r-R22_S11-det004.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S11 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 4, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'} took 2.995 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 8 quanta successfully, 0 failed and 28 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 3, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 3, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000012-0-r-R22_S10-det003.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S10 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 3, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'} took 2.989 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 9 quanta successfully, 0 failed and 27 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 7, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 7, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000010-0-r-R22_S21-det007.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S21 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 7, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'} took 3.022 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 10 quanta successfully, 0 failed and 26 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 5, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 5, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000012-0-r-R22_S12-det005.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S12 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 5, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'} took 2.985 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 11 quanta successfully, 0 failed and 25 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 0, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 0, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000012-0-r-R22_S00-det000.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S00 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 0, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'} took 3.010 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 12 quanta successfully, 0 failed and 24 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 6, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 6, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000010-0-r-R22_S20-det006.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S20 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 6, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'} took 2.984 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 13 quanta successfully, 0 failed and 23 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 2, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 2, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000010-0-r-R22_S02-det002.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S02 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 2, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'} took 3.041 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 14 quanta successfully, 0 failed and 22 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 6, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 6, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000012-0-r-R22_S20-det006.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S20 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 6, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'} took 2.981 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 15 quanta successfully, 0 failed and 21 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 7, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 7, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000012-0-r-R22_S21-det007.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S21 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 7, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'} took 2.980 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 16 quanta successfully, 0 failed and 20 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 8, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 8, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000010-0-r-R22_S22-det008.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S22 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 8, exposure: 7024072600010, band: 'r', physical_filter: 'r_03'} took 3.017 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 17 quanta successfully, 0 failed and 19 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 1, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=isr dataId={instrument: 'LSSTComCamSim', detector: 1, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+astro_metadata_translator.observationInfo WARNING: Ignoring Error calculating property 'altaz_begin' using translator <class 'lsst.obs.lsst.translators.comCamSim.LsstComCamSimTranslator'> and file /sdf/data/rubin/repo/aos_imsim/raw/comcam_exp_time/output/amp_IM_P_20240727_000012-0-r-R22_S01-det001.fits.fz: '<' not supported between instances of 'str' and 'float'
+lsst.isr INFO: Converting exposure to floating point values.
+lsst.isr INFO: Det: R22_S01 - Noise provenance: amp, Gain provenance: amp
+lsst.isr INFO: Assembling CCD from amplifiers.
+lsst.isr INFO: Widening saturation trails.
+lsst.isr INFO: Applying gain correction instead of flat.
+lsst.isr WARNING: No rough magnitude zero point defined for filter r_03.
+lsst.isr INFO: Setting rough magnitude zero point for filter r_03: 31.692803
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'isr' on quantum {instrument: 'LSSTComCamSim', detector: 1, exposure: 7024072600012, band: 'r', physical_filter: 'r_03'} took 2.979 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 18 quanta successfully, 0 failed and 18 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 2, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 2, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 47 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 47 of 47 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 34/47 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 2, visit: 7024072600012, band: 'r', physical_filter: 'r_03'} took 2.749 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 19 quanta successfully, 0 failed and 17 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 1, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 1, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 65 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 65 of 65 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 39/65 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 1, visit: 7024072600010, band: 'r', physical_filter: 'r_03'} took 1.846 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 20 quanta successfully, 0 failed and 16 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 8, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 8, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 49 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 49 of 49 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 36/49 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 8, visit: 7024072600012, band: 'r', physical_filter: 'r_03'} took 1.894 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 21 quanta successfully, 0 failed and 15 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 5, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 5, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 67 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 67 of 67 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 53/67 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 5, visit: 7024072600010, band: 'r', physical_filter: 'r_03'} took 1.912 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 22 quanta successfully, 0 failed and 14 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 4, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 4, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 61 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 61 of 61 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 39/61 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 4, visit: 7024072600012, band: 'r', physical_filter: 'r_03'} took 1.886 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 23 quanta successfully, 0 failed and 13 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 0, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 0, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 47 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 47 of 47 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 30/47 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 0, visit: 7024072600010, band: 'r', physical_filter: 'r_03'} took 1.868 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 24 quanta successfully, 0 failed and 12 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 3, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 3, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 79 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 79 of 79 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 48/79 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 3, visit: 7024072600010, band: 'r', physical_filter: 'r_03'} took 1.879 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 25 quanta successfully, 0 failed and 11 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 4, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 4, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 59 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 59 of 59 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 38/59 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 4, visit: 7024072600010, band: 'r', physical_filter: 'r_03'} took 1.857 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 26 quanta successfully, 0 failed and 10 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 3, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 3, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 80 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 80 of 80 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 46/80 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 3, visit: 7024072600012, band: 'r', physical_filter: 'r_03'} took 1.931 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 27 quanta successfully, 0 failed and 9 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 7, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 7, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 46 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 46 of 46 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 25/46 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 7, visit: 7024072600010, band: 'r', physical_filter: 'r_03'} took 1.923 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 28 quanta successfully, 0 failed and 8 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 5, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 5, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 67 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 67 of 67 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 55/67 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 5, visit: 7024072600012, band: 'r', physical_filter: 'r_03'} took 1.904 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 29 quanta successfully, 0 failed and 7 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 0, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 0, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 49 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 49 of 49 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 30/49 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 0, visit: 7024072600012, band: 'r', physical_filter: 'r_03'} took 1.871 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 30 quanta successfully, 0 failed and 6 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 6, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 6, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 31 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 31 of 31 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 26/31 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 6, visit: 7024072600010, band: 'r', physical_filter: 'r_03'} took 1.833 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 31 quanta successfully, 0 failed and 5 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 2, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 2, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 46 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 46 of 46 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 28/46 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 2, visit: 7024072600010, band: 'r', physical_filter: 'r_03'} took 1.844 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 32 quanta successfully, 0 failed and 4 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 6, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 6, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 36 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 36 of 36 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 27/36 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 6, visit: 7024072600012, band: 'r', physical_filter: 'r_03'} took 1.832 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 33 quanta successfully, 0 failed and 3 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 7, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 7, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 50 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 50 of 50 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 23/50 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 7, visit: 7024072600012, band: 'r', physical_filter: 'r_03'} took 2.313 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 34 quanta successfully, 0 failed and 2 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 8, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 8, visit: 7024072600010, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 47 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 47 of 47 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 36/47 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 8, visit: 7024072600010, band: 'r', physical_filter: 'r_03'} took 1.915 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 35 quanta successfully, 0 failed and 1 remain out of total 36 quanta.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Preparing execution of quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 1, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Constructing task and executing quantum for label=generateDonutDirectDetectTask dataId={instrument: 'LSSTComCamSim', detector: 1, visit: 7024072600012, band: 'r', physical_filter: 'r_03'}.
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Found 64 sources in exposure
+lsst.generateDonutDirectDetectTask.measurementTask INFO: Measured 64 of 64 sources in exposure
+lsst.generateDonutDirectDetectTask INFO: Running Donut Selector
+lsst.generateDonutDirectDetectTask.donutSelector INFO: Selected 38/64 references
+lsst.ctrl.mpexec.singleQuantumExecutor INFO: Execution of task 'generateDonutDirectDetectTask' on quantum {instrument: 'LSSTComCamSim', detector: 1, visit: 7024072600012, band: 'r', physical_filter: 'r_03'} took 1.886 seconds
+lsst.ctrl.mpexec.mpGraphExecutor INFO: Executed 36 quanta successfully, 0 failed and 0 remain out of total 36 quanta.
+ended at Thu Jul 25 13:15:55 PDT 2024 on sdfmilan113

@@ -51,6 +51,10 @@ At the end of this task each detector has a single array containing an averaged 
 
 ### Future Work
 
+While we are focused on preparing the pipeline we have already developed for testing during commissioning we do have some additional tasks we would like to add and test.
+
+1. Single Side-of-Focus Zernike Estimation: The forward modeling method we currently have implemented with `danish` allows us to estimate Zernikes from single donuts without the need for a pair. We need to do some code refactoring to enable this to work in the pipeline using data from single donuts.
+2. Machine Learning Zernike Estimation: We have a third Zernike estimation method based upon machine learning that directly estimates the Zernike coefficients from single donut images. For more information see [Crenshaw et al. (2024)](https://ui.adsabs.harvard.edu/abs/2024AJ....167...86C/abstract).
 
 ### Additional Resources
 
@@ -75,8 +79,20 @@ The WEP APIs and code structure are also extensively documented in the offical `
 
 ### Running as a pipeline from command line
 
-The Active Optics System (AOS) will need to run completely between exposures during Rubin Observatory commissioning. With a realistic estimation of 3 seconds of overhead between exposures this gives us a time constraint of approximately 33 seconds to run the complete AOS including propogating corrections through to the optical system. Therefore, the WEP needs to run within about 25 seconds to leave time for the corrections to be made. We
+The Active Optics System (AOS) will need to run completely between exposures during Rubin Observatory commissioning. With a realistic estimation of 3 seconds of overhead between exposures this gives us a time constraint of approximately 33 seconds to run the complete AOS including propogating corrections through to the optical system. Therefore, the WEP needs to run within about 25 seconds to leave time for the corrections to be made.
+
+Using version 10.4 of `ts_wep` on the USDF we ran the pipeline using the `slurm` scheduler running the WEP from the command line using the `pipetask run` command on one pair of simulated ComCam visits. We have included the slurm scripts and pipeline configuration as well as a notebook analyzing the results to make the plots in this section in the `notebooks` folder accompanying this technote. With ComCam we need a pair of visits so there are 18 total exposures. We ran with 18 processes so that we would have enough at each step of the pipeline and we limited the number of sources in the catalog for each detector to 5. Figure 1 below shows the results with the bold numbers showing the time between different tasks ending and the subsequent set of tasks starting. We see that the total time for the pipeline is about 75 seconds but approximately 40 seconds is taken up by empty time between sets of tasks.
+
+
+<figure>
+  <img src="https://raw.githubusercontent.com/lsst-sitcom/sitcomtn-135/main/notebooks/figures/figure_1.png" alt="Figure 1"/>
+  <figcaption>Figure 1: WEP pipeline timing on USDF from command line using 18 processes.</figcaption>
+</figure>
 
 ### Running inside Rapid Analysis
 
 
+### Future Work
+
+More parallelization?
+ML, single side of focus should improve?
