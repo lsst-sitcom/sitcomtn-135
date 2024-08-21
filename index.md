@@ -83,13 +83,22 @@ The Active Optics System (AOS) will need to run completely between exposures dur
 
 Using version 10.4 of `ts_wep` on the USDF we ran the pipeline using the `slurm` scheduler running the WEP from the command line using the `pipetask run` command on one pair of simulated ComCam visits. We have included the slurm scripts and pipeline configuration as well as a notebook analyzing the results to make the plots in this section in the `notebooks` folder accompanying this technote. With ComCam we need a pair of visits so there are 18 total exposures. We ran with 18 processes so that we would have enough at each step of the pipeline and we limited the number of sources in the catalog for each detector to 5. Figure 1 below shows the results with the bold numbers showing the time between different tasks ending and the subsequent set of tasks starting. We see that the total time for the pipeline is about 75 seconds but approximately 40 seconds is taken up by empty time between sets of tasks.
 
-
 <figure>
   <img src="https://raw.githubusercontent.com/lsst-sitcom/sitcomtn-135/main/notebooks/figures/figure_1.png" alt="Figure 1"/>
-  <figcaption>Figure 1: WEP pipeline timing on USDF from command line using 18 processes.</figcaption>
+  <figcaption>Figure 1: WEP pipeline timing on USDF from command line using 18 processes. The bold type indicates the time gaps between sets of tasks.</figcaption>
 </figure>
 
+Upon seeing the gaps between tasks we contacted Rubin Data Management for input with the following JIRA ticket: [DM-45524](https://rubinobs.atlassian.net/browse/DM-45424). It was suggested that the gaps are due to startup time between each new process as the processes that complete one set of task finish they are killed and new ones must load python and data to accomplish the next set of tasks. The very long time gaps are a result of the slow `/sdf` filesystem on USDF. When Andy Salnikov ran on `lscratch` on USDF, the fast local disk on one of the USDF machines we found the following shown in Figure 2.
+
+<figure>
+  <img src="https://raw.githubusercontent.com/lsst-sitcom/sitcomtn-135/main/notebooks/figures/figure_2.png" alt="Figure 2"/>
+  <figcaption>Figure 2: WEP pipeline timing on USDF fast local disk (`lscratch`) from command line using 18 processes. The bold type indicates the time gaps between sets of tasks.</figcaption>
+</figure>
+
+This test ran using the full donut catalogs so the timing of the final Zernike estimation step is much longer but the difference we are interested in is the time between sets of tasks. Using the fast, local filesystem we see that the time gaps are cut by more than half to a total to 18 seconds. If we had only used 5 sources so that we had the same time in tasks as the first test this would give us a full pipeline run time of about 53 seconds. This time is closer to our goal of 25 seconds but still about half a minute off. Looking at Figure 2 we see that there are still two areas where we are losing significant time that is solely related to multiprocessing and the filesystem. The first is that there are still 18 seconds of time gaps between running sets of tasks. The second is that there is variability in the start time for all the processes running the same type of task that costs us an additional 5-10 seconds. Solving these two issues together would likely be enough to run the pipeline in the time needed with 5 sources on each detector. Luckily the WEP will not run from the command line in commissioning be will be a part of the Rapid Analysis (RA) tooling which we will explain in the next section.
+
 ### Running inside Rapid Analysis
+
 
 
 ### Future Work
