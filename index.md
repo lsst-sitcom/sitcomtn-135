@@ -99,7 +99,10 @@ This test ran using the full donut catalogs so the timing of the final Zernike e
 
 ### Running inside Rapid Analysis
 
-
+<figure>
+  <img src="https://raw.githubusercontent.com/lsst-sitcom/sitcomtn-135/main/notebooks/figures/figure_3.png" alt="Figure 3"/>
+  <figcaption>Figure 3: Maximum Time taken for an individual instance of each task. Stacking together shows a proposed maximum timing of pipeline possible with Rapid Analysis.</figcaption>
+</figure>
 
 ### Future Work
 
